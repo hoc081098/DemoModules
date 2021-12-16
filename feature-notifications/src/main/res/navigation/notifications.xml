@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notifications_graph"
+    app:startDestination="@id/notifications_fragment">
+
+    <fragment
+        android:id="@+id/notifications_fragment"
+        android:name="com.example.demomodules.featurenotifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_notifications_fragment_to_notificationDetailFragment"
+            app:destination="@id/notificationDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationDetailFragment"
+        android:name="com.example.demomodules.featurenotifications.NotificationDetailFragment"
+        android:label="Notification detail"
+        tools:layout="@layout/fragment_notification_detail" />
+
+</navigation>
